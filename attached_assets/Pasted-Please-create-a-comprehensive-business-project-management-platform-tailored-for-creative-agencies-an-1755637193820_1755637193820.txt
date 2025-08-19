@@ -1,0 +1,42 @@
+Please create a comprehensive business/project management platform tailored for creative agencies and brand-focused teams. The platform should streamline project creation, asset management, and collaboration, supporting the following features and design requirements:
+
+**Core Pages & Structure:**
+
+1. **Homepage:** Brief introduction to the platform, key features overview, and clear navigation to login/signup.
+2. **Authentication:** Support user authentication with OAuth providers (Google and GitHub) and traditional email/password. Ensure secure user sessions.
+3. **Multi-Step Project Creation Wizard:**
+   - **Step 1:** Capture brand information (brand name, description, industry)
+   - **Step 2:** Project details (project name, objectives, target audience)
+   - **Step 3:** Brand asset upload (images/files, with validation on type/size)
+   - **Step 4:** Review & summary for confirmation
+   - Add persistent form data, validation, and navigation (Next, Previous, Finish) with a visual progress indicator.
+4. **Project Dashboard:** User-specific dashboard showing all projects, with real-time data updates and search/filtering capabilities.
+5. **Admin Dashboard:** Section for administrators to manage projects/users, perform bulk actions (e.g., delete, archive), advanced filtering, and access to analytics.
+6. **Asset Management:** Advanced file/folder organization with drag-and-drop, enhanced upload management, and integration with AWS S3 or Google Cloud for storage. Show upload progress indicators and support advanced operations (reorganize, bulk actions).
+7. **Analytics Reporting:** Dashboard displaying project metrics and user behaviors using real chart libraries (e.g., Chart.js, D3, or Recharts) with date range and custom filter controls.
+8. **Collaboration Tools:** Real-time project collaboration via WebSockets (live editing, commenting). Support user-specific dashboard customization and saving.
+9. **Notifications:** In-app and email notifications for project updates, actions, and activity logs.
+10. **Contact Form & Testimonials:** Responsive contact form with validation, and a testimonials section to build trust.
+11. **Pricing Page:** Present clear pricing tiers for different user needs.
+
+**Design and UX Requirements:**
+
+- Modern, clean, and professional aesthetic suited for creative businesses.
+- Responsive design; must work seamlessly across desktop, tablet, and mobile.
+- Use a harmonious, vibrant color palette (e.g., shades of blue, white, grey with accent colors) and clear typography.
+- Intuitive navigation with clear separation of user and admin areas.
+- Display feedback for all user actions (e.g., validations, notifications, progress).
+
+**Technical & React Implementation Requirements:**
+
+- Utilize React best practices: component-based structure, hooks where suitable, and state management (e.g., Context API or Redux for authentication/session/project data).
+- Securely integrate OAuth (Google, GitHub) and backend API endpoints for authentication and data persistence.
+- Connect file uploads to AWS S3 or Google Cloud storage via backend integration.
+- Implement charts and analytics with a charting library, supporting dynamic and real-time updates.
+- Enable real-time collaboration and live metrics via WebSockets.
+- Support robust form validation and persistent form state across navigation.
+- Ensure accessibility (WCAG-compliant) and performance optimization throughout.
+- Modular code and clear component separation for future scalability.
+
+**Summary:**
+This platform is a brand and project management solution for creative teams and agencies, solving the need for streamlined asset organization, secure file sharing, collaboration, project analytics, and client management — all in one scalable, professional solution.
