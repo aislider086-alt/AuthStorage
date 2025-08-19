@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { setupAuth, isAuthenticated } from "./replitAuth";
+import { setupAuth, isAuthenticated } from "./mockAuth";
 import { insertProjectSchema, insertContactSubmissionSchema, insertProjectAssetSchema } from "@shared/schema";
 import { z } from "zod";
 

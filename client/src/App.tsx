@@ -12,6 +12,7 @@ import Dashboard from "@/pages/dashboard";
 import Admin from "@/pages/admin";
 import Analytics from "@/pages/analytics";
 import Pricing from "@/pages/pricing";
+import Navigation from "@/components/Navigation";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -20,7 +21,7 @@ function Router() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading...</p>
         </div>
       </div>
@@ -28,21 +29,24 @@ function Router() {
   }
 
   return (
-    <Switch>
-      {!isAuthenticated ? (
-        <Route path="/" component={Landing} />
-      ) : (
-        <>
-          <Route path="/" component={Home} />
-          <Route path="/projects/new" component={ProjectWizard} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/admin" component={Admin} />
-          <Route path="/analytics" component={Analytics} />
-          <Route path="/pricing" component={Pricing} />
-        </>
-      )}
-      <Route component={NotFound} />
-    </Switch>
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      <Switch>
+        {!isAuthenticated ? (
+          <Route path="/" component={Landing} />
+        ) : (
+          <>
+            <Route path="/" component={Home} />
+            <Route path="/projects/new" component={ProjectWizard} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/admin" component={Admin} />
+            <Route path="/analytics" component={Analytics} />
+            <Route path="/pricing" component={Pricing} />
+          </>
+        )}
+        <Route component={NotFound} />
+      </Switch>
+    </div>
   );
 }
 
